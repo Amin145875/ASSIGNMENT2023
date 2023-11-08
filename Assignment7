@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+// This is aFunction to calculate late fee
+int calculateLateFee(int daysLate, string bookType) {
+    int lateFee = 0;
+
+    if (bookType == "Regular") {
+        if (daysLate <= 0) {
+            lateFee = 0;
+        } else if (daysLate > 0 && daysLate <= 7) {
+            lateFee = 1;
+        } else if (daysLate > 7 && daysLate <= 30) {
+            lateFee = 2;
+        } else {
+            lateFee = 3;
+        }
+    } else if (bookType == "Children's") {
+        if (daysLate <= 0) {
+            lateFee = 0;
+        } else if (daysLate > 0 && daysLate <= 3) {
+            lateFee = 1;
+        } else if (daysLate > 3 && daysLate <= 15) {
+            lateFee = 2;
+        } else {
+            lateFee = 3;
+        }
+    } else if (bookType == "Reference") {
+        if (daysLate <= 0) {
+            lateFee = 0;
+        } else if (daysLate > 0 && daysLate <= 2) {
+            lateFee = 1;
+        } else if (daysLate > 2 && daysLate <= 10) {
+            lateFee = 2;
+        } else {
+            lateFee = 3;
+        }
+    } else {
+        cout << "Invalid book type." << endl;
+    }
+
+    return lateFee;
+}
+
+int main() {
+    int daysLate;
+    string bookType;
+
+    cout << "enter  number of days late: ";
+    cin >> daysLate;
+
+    cout << "enter type of a book (Regular, Children's, Reference): ";
+    cin >> bookType;
+
+    int lateFee = calculateLateFee(daysLate, bookType);
+
+    if (lateFee != 0) {
+        cout << "The late fees is $" << lateFee << "." << endl;
+    }
+
+    return 0;
+}
