@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    //declare variables
+    string name;
+    int age;
+    double bank_balance;
+    string CRB_status;
+    int months_of_customer;
+    //enter customer's data here
+
+    cout<<"Enter Customer Age:";
+    cin>>name;
+
+    cout<<"Enter Customer Bank Balance:";
+    cin>>bank_balance;
+
+    cout<<"Enter Customer CRB Status:";
+    cin>>CRB_status;
+    
+
+    cout<<"Enter the number of month Customer have beenwith the bank :";
+    cin>>months_of_customer;
+
+    if (age > 22 && bank_balance > 50000 && CRB_status == "good" && months_of_customer > 6) {
+        cout << "\nCustomer " << name << " is qualified for the loan.\n";
+    } else {
+        cout << "\nCustomer " << name << " is not qualified for the loan.\n";
+    }
+
+    return 0;
+}
