@@ -1,0 +1,27 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    //variables
+    int a, b, max;
+    //data
+
+    cout << " Please enter the first number: ";
+    cin >> a;
+
+    cout << " Please enter the second number: ";
+    cin >> b;
+    //comparison
+
+    if(a == b) {
+        cout << "Both numbers are equal." << endl;
+        return 0;
+    }
+
+    max = (a > b) ? a : b;
+
+    cout << "The maximum number is: " << max << endl;
+
+    return 0;
+}
