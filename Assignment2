@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string.h>
+
+
+int main()
+{
+    
+    std::string studentName;
+    int marks;
+
+    std::cout << "The the full name of the student: ";
+    // getline(std::cin, studentName);
+    std::cin >> studentName;
+
+    std::cout << "Enter the marks of the student: ";
+    std::cin >> marks;
+
+    if (marks >= 70)
+    {
+        /* code */
+        std::cout << studentName << " : A";
+    }
+    else if (marks >= 60 && marks <= 69)
+    {
+        /* code */
+        std::cout << studentName << " : B";
+    }
+    else if (marks >= 50 && marks <= 59)
+    {
+        /* code */
+        std::cout << studentName << " : C";
+    }
+    else if (marks >= 40 && marks <= 49)
+    {
+        /* code */
+        std::cout << studentName << " : D";
+    }
+    else
+    {
+        /* code */
+        std::cout << studentName << " : F";
+    }
+    
+
+    return 0;
+}
