@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string full_name;
+    std::string Course;
+    int score;
+    //Enter students data here
+
+    std::cout << "Enter the full name of the student: ";
+    std::cin >> full_name;
+
+    std::cout << "please Enter the student course: ";
+    std::cin >> Course;
+
+    std::cout << " Please Enter thestudent score: ";
+    std::cin >> score;
+
+    std::cout << "Student Full Name: " << full_name << std::endl;
+    std::cout << "Course: " << Course << std::endl;
+
+    char grade;
+
+    switch (score / 10) {
+        case 10:
+        case 9:
+            grade = 'A';
+            break;
+        case 8:
+        case 7:
+            grade = 'B';
+            break;
+        case 6:
+            grade = 'C';
+            break;
+        case 5:
+            grade = 'D';
+            break;
+        default:
+            grade = 'F';
+            break;
+    }
+
+    std::cout << "Grade: " << grade << std::endl;
+
+    return 0;
+}
