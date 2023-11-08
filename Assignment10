@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float daily_limit = 300.00;
+    float withdrawal_amount; 
+    float balance = 700.00; 
+
+    cout << "Please enter the amount you would like to withdraw: ";
+    cin >> withdrawal_amount;
+
+    
+        
+        if (withdrawal_amount <= balance) {
+
+            balance -= withdrawal_amount;
+             // withdraw amount from balance
+            cout << "Your new  balance is: $" << balance << endl;
+        } else {
+            cout << "Error: You have Insufficient funds in your account!" << endl;
+        }
+    } else {
+        cout << "Error:You have Exceeded daily withdrawal limit!" << endl;
+    }
+
+    return 0;
+}
