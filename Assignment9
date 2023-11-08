@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    //variables declaration
+    int age;
+    string movieType;
+    //data entry here
+
+    cout << "please enter your age: ";
+    cin >> age;
+
+    cout << "Enter the movie type (regular or 3D): ";
+    cin >> movieType;
+
+    if (age < 5) {
+        cout << "The ticket price is $0." << endl;
+    }
+    else if (age >= 5 && age < 16) {
+        if (movieType == "regular") {
+            cout << "The  price is $15." << endl;
+        }
+        else if (movieType == "3D") {
+            cout << "The  price is $20." << endl;
+        }
+        else {
+            cout << "Invalid movie type. Please enter either 'regular' or '3D'." << endl;
+        }
+    }
+    else if (age >= 13 && age < 60) {
+        if (movieType == "regular") {
+            cout << "The ticket price is $15." << endl;
+        }
+        else if (movieType == "3D") {
+            cout << "The ticket price is $20." << endl;
+        }
+        else {
+            cout << "Invalid movie type. Please enter either 'regular' or '3D'." << endl;
+        }
+    }
+    else if (age >= 60) {
+        if (movieType == "regular") {
+            cout << "The ticket price is $10." << endl;
+        }
+        else if (movieType == "3D") {
+            cout << "The ticket price is $15." << endl;
+        }
+        else {
+            cout << "Invalid movie type. Please enter either 'regular' or '3D'." << endl;
+        }
+    }
+    else {
+        cout << "Invalid age. Please enter a valid age." << endl;
+    }
+
+    return 0;
+}
