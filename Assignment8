@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main() {
+    //variables
+    double total_cost;
+    double purchase_amount;
+
+    std::cout << "Please enter the purchase amount: ";
+    std::cin >> purchase_amount;
+
+    if (purchase_amount < 0) {
+        std::cout << "Purchase amount can't be negative. Exiting program." << std::endl;
+        return 1;
+    }
+
+    if (purchase_amount >= 1000) {
+        total_cost = purchase_amount - (purchase_amount * 0.2);
+    } else if (purchase_amount >= 500) {
+        total_cost = purchase_amount - (purchase_amount * 0.15);
+    } else if (purchase_amount >= 200) {
+        total_cost = purchase_amount - (purchase_amount * 0.1);
+    } else {
+        total_cost = purchase_amount;
+    }
+
+    std::cout << "The total cost after discount application is: " << total_cost << std::endl;
+
+    return 0;
+}
